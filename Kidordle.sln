@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kidordle.UI", "Kidordle.UI\Kidordle.UI.csproj", "{91091B48-B387-4ABD-AF3C-CE0FD9304A4E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KidordleGame", "KidordleGame\KidordleGame.csproj", "{02F573A6-8572-4E8C-A0BA-EB3DE7D847D0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kidordle.Tests", "Kidordle.Tests\Kidordle.Tests.csproj", "{70470547-89B7-4782-AD5F-1F17EEBAE1C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KidordleConsoleApp", "KidordleConsoleApp\KidordleConsoleApp.csproj", "{F1C51B38-317F-4885-90D0-27864D67437D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91091B48-B387-4ABD-AF3C-CE0FD9304A4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91091B48-B387-4ABD-AF3C-CE0FD9304A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91091B48-B387-4ABD-AF3C-CE0FD9304A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91091B48-B387-4ABD-AF3C-CE0FD9304A4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02F573A6-8572-4E8C-A0BA-EB3DE7D847D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02F573A6-8572-4E8C-A0BA-EB3DE7D847D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02F573A6-8572-4E8C-A0BA-EB3DE7D847D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02F573A6-8572-4E8C-A0BA-EB3DE7D847D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70470547-89B7-4782-AD5F-1F17EEBAE1C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70470547-89B7-4782-AD5F-1F17EEBAE1C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70470547-89B7-4782-AD5F-1F17EEBAE1C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70470547-89B7-4782-AD5F-1F17EEBAE1C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1C51B38-317F-4885-90D0-27864D67437D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1C51B38-317F-4885-90D0-27864D67437D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1C51B38-317F-4885-90D0-27864D67437D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1C51B38-317F-4885-90D0-27864D67437D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {986A3A4F-BE9B-4CC3-A952-EEC92426B84E}
+	EndGlobalSection
+EndGlobal

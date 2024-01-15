@@ -1,0 +1,23 @@
+﻿@using KidordleGame
+<div Class=@("tile " + GetCssClass())>@Letter</div>
+
+@code {
+    [Parameter]
+    public char Letter { get; set; }
+
+    [Parameter]
+    public short LetterResult { get; set; }
+
+    private string GetCssClass()
+    {
+        return LetterResult switch
+        {
+            1 => "tile-full-hit",
+            2 => "tile-partial-hit",
+            0 => "tile-not-hit",
+            _ => throw new ArgumentOutOfRangeException()
+        };
+    }
+
+
+}

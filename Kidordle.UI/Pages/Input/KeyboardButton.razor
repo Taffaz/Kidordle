@@ -1,0 +1,26 @@
+﻿@using KidordleGame
+@inject Game _game
+
+<div Class=@("key-button key-button-letter " + GetCssStyle()) onclick="@OnClick">@Text</div>
+
+@code {
+    [Parameter]
+    public char Text { get; set; }
+
+    [Parameter]
+    public Action<MouseEventArgs> OnClick { get; set; } = null!;
+
+    private string GetCssStyle()
+    {
+        if (!_game.HasLetterBeenGuessed(Text.ToString().ToUpper().ToCharArray()[0])) return "black-gold-container";
+
+        var matchResult = _game.GuessedLetters[Text.ToString().ToUpper().ToCharArray()[0]];
+        return matchResult switch
+        {
+            1 => "btn-full-hit",
+            2 => "btn-char-hit",
+            0 => "btn-none-hit",
+            _ => throw new ArgumentOutOfRangeException()
+        };
+    }
+}
