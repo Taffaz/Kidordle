@@ -25,9 +25,9 @@ jobs:
     # Publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
       run: dotnet publish Kidordle.UI/Kidordle.UI.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
-      # changes the base-tag in index.html from '/' to 'BlazorGitHubPagesDemo' to match GitHub Pages repository subdirectory
-    - name: Change base-tag in index.html from / to BlazorGitHubPagesDemo
-      run: sed -i 's/<base href="\/" \/>/<base href="\/Kidordle\/" \/>/g' release/wwwroot/index.html
+      # changes the base-tag in index.html from '/' to 'Kidordle' to match GitHub Pages repository subdirectory
+    - name: Change base-tag in index.html from / to Kidordle
+      run: sed -i 's/<base href="\/" \/>/<base href="\/Kidordle\/" \/>/g' dist/Web/wwwroot/index.html
     # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
     - name: Add .nojekyll file
       run: touch release/wwwroot/.nojekyll
