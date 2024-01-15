@@ -9,14 +9,15 @@
     </MudGrid>
     <MudGrid Justify="Justify.Center" Spacing="1">
         <MudItem xs="2" Class="d-flex justify-center">
-            <MudButton Variant="Variant.Filled" Color="@Color.Info" Class="black-gold-container key-button"
-                       @onclick="_ => Guess()" >enter</MudButton>
+            <MudIconButton Icon="@Icons.Material.Outlined.Backspace" Variant="Variant.Filled" Color="Color.Info" Class="key-button"
+                           @onclick="_ => Back()"/>
         </MudItem>
         <KeyboardRow KeysToGenerate="_keyboardRows[2]" />
         <MudItem xs="2" Class="d-flex justify-center">
-            <MudIconButton Icon="@Icons.Material.Outlined.Backspace" Variant="Variant.Filled" Color="Color.Info" Class="black-gold-container key-button"
-                           @onclick="_ => Back()"/>
+            <MudButton Variant="Variant.Filled" Color="@Color.Info" Class="key-button"
+                       @onclick="_ => Guess()" >enter</MudButton>
         </MudItem>
+        
     </MudGrid>
 </div>
 
