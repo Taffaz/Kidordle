@@ -21,6 +21,13 @@ public class Game
     public string Answer { get => string.Join("", _answer); }
     public bool IsLose { get; set; }
     public bool IsWin { get; set; }
+    public int GuessesRemaining
+    {
+        get
+        {
+            return Constants.MAX_GUESSES - Results.Count;
+        }
+    }
 
     public Game(char[] answer)
     {
@@ -130,7 +137,7 @@ public class Game
 
         }
 
-        var wasLastGuess = Results.Count == Constants.MAX_GUESSES; 
+        var wasLastGuess = Results.Count == Constants.MAX_GUESSES - 1;
 
         return new WordResult(guess, results, hasWon, wasLastGuess);
 

@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+@using Kidordle.UI.Pages
 
 <MudThemeProvider IsDarkMode="true" />
 <MudDialogProvider />
@@ -6,10 +7,11 @@
 
 <MudLayout>
     <MudAppBar>
-        KIDORDLE
+        KIDORDLE: 
+        <GuessCounter />
     </MudAppBar>
-    <MudMainContent>
-        <MudContainer class="mud-height-full" MaxWidth="MaxWidth.Large">
+    <MudMainContent >
+        <MudContainer MaxWidth="MaxWidth.False">
             @Body
         </MudContainer>
     </MudMainContent>

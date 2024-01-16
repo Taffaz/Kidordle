@@ -1,0 +1,26 @@
+﻿@using KidordleGame
+@using MudBlazor
+@inject Game _game
+@implements IDisposable
+
+<MudItem>
+    <div>
+        Guesses Remaining @_game.GuessesRemaining
+    </div>
+</MudItem>
+
+@code {
+    public void Dispose()
+    {
+        _game.GameUpdated -= OnGameUpdated;
+    }
+    protected override Task OnInitializedAsync()
+    {
+        _game.GameUpdated += OnGameUpdated;
+
+        return Task.FromResult(0);
+
+    }
+
+    private void OnGameUpdated() { InvokeAsync(StateHasChanged); }
+}
