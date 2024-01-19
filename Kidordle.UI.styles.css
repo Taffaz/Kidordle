@@ -23,6 +23,10 @@
         display: none;
     }
 /* /Pages/Home.razor.rz.scp.css */
+:root[b-rcao62iadm] {
+    --keyboard-height: 300px;
+}
+
 
 .letter-box-row[b-rcao62iadm] {
     display: flex !important;
@@ -33,13 +37,18 @@
 .main-game[b-rcao62iadm] {
     display: flex;
     flex-direction: column;
-    height: 94vh;
+    height: calc(100vh - var(--mud-appbar-height));
     padding-top: 15px;
+    min-width: 380px;
 }
 
 .input-row[b-rcao62iadm] {
-    min-height: 300px;
-    min-width: 420px;
+    height: var(--keyboard-height);
+}
+
+.game-grid[b-rcao62iadm] {
+    display:flex;
+    flex-direction: column;
 }
 
 .top[b-rcao62iadm] {
@@ -61,13 +70,12 @@
     outline: none;
 }
 
-#container[b-jvq5s9lmtw] {
+/*#container {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-}
+}*/
 /* /Pages/Input/KeyboardButton.razor.rz.scp.css */
 .key-button-letter[b-nokfz8ks5o] {
     text-transform: uppercase;
