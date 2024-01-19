@@ -1,4 +1,8 @@
-﻿
+﻿:root {
+    --keyboard-height: 300px;
+}
+
+
 .letter-box-row {
     display: flex !important;
     justify-content: center !important;
@@ -8,13 +12,18 @@
 .main-game {
     display: flex;
     flex-direction: column;
-    height: 94vh;
+    height: calc(100vh - var(--mud-appbar-height));
     padding-top: 15px;
+    min-width: 380px;
 }
 
 .input-row {
-    min-height: 300px;
-    min-width: 420px;
+    height: var(--keyboard-height);
+}
+
+.game-grid {
+    display:flex;
+    flex-direction: column;
 }
 
 .top {

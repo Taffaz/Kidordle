@@ -7,44 +7,58 @@
 
 <div class="main-game">
     <div class="top">
-        <MudGrid Justify="Justify.Center" Spacing="1">
-            @if (_game.IsLose)
-            {
-                <MudAlert Severity="Severity.Warning" Variant="Variant.Filled" Elevation="24" NoIcon="true" ContentAlignment="HorizontalAlignment.Center" Style="max-width: 480px;">
-                    THE WORD WAS: @_game.Answer.ToUpper()
-                </MudAlert>
-                <br />
-            }
-            @foreach (var guessResult in _game.Results)
-            {
-                <MudItem Class="d-flex justify-center" xs="12">
-                    <div class="letter-box-row">
-                        @for (int x = 0; x < _game.Answer.Length; x++)
-                        {
-                            <LetterBox Letter="guessResult.Guess[x]" LetterResult="guessResult.LetterResult[x]" />
-                        }
-                    </div>
-                </MudItem>
-                <br />
-            }
-            @if (_game.IsWin)
-            {
-                <MudAlert Severity="Severity.Success" Variant="Variant.Filled" Elevation="24" NoIcon="true" ContentAlignment="HorizontalAlignment.Center" Style="max-width: 480px;">Congratuations!</MudAlert>
-            }
-            else if (!_game.IsLose)
-            {
-                <MudItem Class="d-flex justify-center" xs="12">
-                    <div class="letter-box-row">
-                        @for (var i = 0; i < _game.Answer.Length; i += 1)
-                        {
-                            var idx = i;
-                            <InputLetterBox Letter="_game.GetInputAt(idx)" />
-                        }
-                    </div>
-                </MudItem>
-                <br />
-            }
-            <br />
+        <MudGrid Spacing="1" Justify="Justify.Center">
+            <div class="game-grid">
+                @if (_game.IsLose)
+                {
+                    <MudAlert Severity="Severity.Warning" Variant="Variant.Filled" Elevation="24" NoIcon="true" ContentAlignment="HorizontalAlignment.Center" Style="max-width: 480px;">
+                        THE WORD WAS: @_game.Answer.ToUpper()
+                    </MudAlert>
+                    <br />
+                }
+                @foreach (var guessResult in _game.Results)
+                {
+                    <MudItem Class="d-flex justify-center">
+                        <div class="letter-box-row">
+                            @for (int x = 0; x < _game.Answer.Length; x++)
+                            {
+                                <LetterBox Letter="guessResult.Guess[x]" LetterResult="guessResult.LetterResult[x]" />
+                            }
+                        </div>
+                    </MudItem>
+                    <br />
+                }
+                @if (_game.IsWin)
+                {
+                    <MudAlert Severity="Severity.Success" Variant="Variant.Filled" Elevation="24" NoIcon="true" ContentAlignment="HorizontalAlignment.Center" Style="max-width: 480px;">Congratuations!</MudAlert>
+                }
+                else if (!_game.IsLose)
+                {
+                    <MudItem Class="d-flex justify-center">
+                        <div class="letter-box-row">
+                            @for (var i = 0; i < _game.Answer.Length; i += 1)
+                            {
+                                var idx = i;
+                                <InputLetterBox Letter="_game.GetInputAt(idx)" />
+                            }
+                        </div>
+                    </MudItem>
+                    <br />
+
+                    @for (var i = _game.Results.Count; i < _game.MaxGuesses - 1; i++)
+                    {
+                        <MudItem Class="d-flex justify-center">
+                            <div class="letter-box-row">
+                                @for (var x = 0; x < _game.Answer.Length; x++)
+                                {
+                                    <LetterBox Letter="_game.BlankChar" LetterResult="0" />
+                                }
+                            </div>
+                        </MudItem>
+                        <br />
+                    }
+                }
+            </div>
         </MudGrid>
     </div>
     <br />

@@ -21,13 +21,16 @@ public class Game
     public string Answer { get => string.Join("", _answer); }
     public bool IsLose { get; set; }
     public bool IsWin { get; set; }
-    public int GuessesRemaining
+    public char BlankChar
     {
         get
         {
-            return Constants.MAX_GUESSES - Results.Count;
+            return ' ';
         }
     }
+    public int GuessesRemaining => Constants.MAX_GUESSES - Results.Count;
+
+    public int MaxGuesses => Constants.MAX_GUESSES;
 
     public Game(char[] answer)
     {
