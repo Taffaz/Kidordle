@@ -1,0 +1,43 @@
+﻿@page "/test"
+@using Kidordle.UI.Pages.Input
+@using KidordleGame
+@using MudBlazor
+@inject Game _game
+@implements IDisposable
+
+<div class="main-game">
+    <div class="top">
+        <MudPaper>aaa
+            aaa
+            aaa
+            aa
+            aa
+            aa
+            aaa
+        </MudPaper>
+    </div>
+    <br />
+    <div class="input-row">
+        <Keyboard />
+    </div>
+</div>
+
+@code {
+    public void Dispose()
+    {
+        _game.GameUpdated -= OnGameUpdated;
+        _game.InputChanged -= OnInputChanged;
+    }
+    protected override Task OnInitializedAsync()
+    {
+        _game.GameUpdated += OnGameUpdated;
+        _game.InputChanged += OnInputChanged;
+
+        return Task.FromResult(0);
+
+    }
+
+    private void OnInputChanged() { InvokeAsync(StateHasChanged); }
+    private void OnGameUpdated() { InvokeAsync(StateHasChanged); }
+
+}

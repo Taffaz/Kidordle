@@ -1,15 +1,7 @@
-﻿
-.letter-box-row {
-    display: flex !important;
-    justify-content: center !important;
-    width: 100%;
-}
-
-.main-game {
+﻿.main-game {
     display: flex;
     flex-direction: column;
     height: 94vh;
-    padding-top: 15px;
 }
 
 .input-row {
@@ -20,6 +12,7 @@
 .top {
     flex-shrink: 1;
     flex-grow: 1;
+
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
