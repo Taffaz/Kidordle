@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Kidordle.UI",
   "resources": {
-    "hash": "sha256-bGKkRDnOwURTdlAqeTyH1Cuh/vw/bzrxao0YTXdkIS0=",
+    "hash": "sha256-ShBWnSBrKFxx6mbjxthmI3EkHbEdUa2CO4fLMlm//+s=",
     "jsModuleNative": {
       "dotnet.native.8.0.1.jjyhtyrlpd.js": "sha256-U3DDnyef6FaENP7eEENBJnl7qVe/jrGECjCx+aVDn8Q="
     },
@@ -17,8 +17,8 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "Kidordle.UI.wasm": "sha256-FmDjcARtppr0gq/Pf6G+uAjMNOAWEhToXM0491iRtPQ=",
-      "KidordleGame.wasm": "sha256-NSiynZ+vfe9EL/jQIz2e3ZRCgIZ7IaNijSntQj1PQrE=",
+      "Kidordle.UI.wasm": "sha256-FLB/1PRr+h+1QGlOfvBUklWW63PymPTfxIoMx9pREo8=",
+      "KidordleGame.wasm": "sha256-LOdF99cgWRMZfrgnpsgCKkxkBQgp43FlnOFPYbTOGLU=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-S6S6SjKMpW4QhZaysz98li8XotN9M1oPK5V4h/Ldihs=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-FNXJMlDiZQM/eH+ZdeJpJjKLEQqa+k/XUS4lYOX7IwY=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-d6tN87QrJstiTMcLaUtZ6TWiNHa8A74Suuzx95thRrE=",
